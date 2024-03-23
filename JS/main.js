@@ -6,17 +6,17 @@ window.addEventListener('DOMContentLoaded', e => {
 
 function initApp() {
   //Dom Elements
-  const searchSiteInput = document.querySelector('.search-input');
-  const searchForm = document.querySelector('.search-abba-website');
+  const searchSiteInput = document.querySelector('.search-input-toggle');
+  const closeSearchModal = document.querySelector('.close-search-modal');
   const searchSiteBtn = document.querySelector('.search-btn');
   const headerLinkNav = document.querySelectorAll('.header-nav-links li');
 
-  searchSiteInput.addEventListener('focus', e => {
-    searchSiteBtn.classList.remove('d-none');
+  searchSiteInput.addEventListener('click', e => {
+    searchSiteInput.classList.add('scale-0');
   });
 
-  searchSiteInput.addEventListener('blur',  e => {
-    searchSiteBtn.classList.add('d-none');
+  closeSearchModal.addEventListener('click',  e => {
+    searchSiteInput.classList.remove('scale-0');
   });
 
   /* Header Link Hover Effects */

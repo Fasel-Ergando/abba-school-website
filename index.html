@@ -71,10 +71,30 @@
 
         <div class="d-flex align-items-center">
           <form class="search-abba-website me-4">
-            <input type="text" placeholder="Search" title="Press '/' to focus" class="search-input rounded-pill">
-            <button class="search-btn d-none">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
-            </button>
+            <!-- Toggle the search site modal -->
+            <input type="text" placeholder="Search" title="Press '/' to focus" class="search-input-toggle rounded-pill" data-bs-toggle="modal" data-bs-target="#searchSiteModal">
+
+            <!-- Search Site Modal -->
+            <div class="modal fade" id="searchSiteModal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="searchSiteModal" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="searchSiteModal">Search Abba School</h5>
+                    <button type="button" class="btn-close close-search-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body pb-5">
+                    <input type="text" placeholder="Search (Press '/' to focus)" title="Press '/' to focus" class="search-input rounded-pill">
+                    <button class="search-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                    </button>
+
+                    <div class="display-search-results mt-4 ps-2">
+                      No results found for something
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </form>
           
           <div class="nav-sm d-lg-none me-4">
