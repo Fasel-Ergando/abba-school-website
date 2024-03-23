@@ -122,12 +122,6 @@ main {
   margin: 10px 0;
 }
 
-@media (max-width: 1024px) {
-  .header-nav-links li a {
-    font-size: 17px;
-  }
-}
-
 .hero-text p {
   text-align: center;
   mix-blend-mode: difference;
@@ -175,4 +169,14 @@ main {
  .school-logo-img {
   width: 150px;
  } 
+}
+
+@media (max-width: 1024px) {
+  .side-img-right .image-1,
+  .side-img-right .image-2 {
+    background-position: center;
+  }
+  .header-nav-links li a {
+    font-size: 17px;
+  }
 }
