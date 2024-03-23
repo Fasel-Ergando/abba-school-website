@@ -14,6 +14,9 @@ function initApp() {
   searchSiteInput.addEventListener('click', e => {
     searchSiteInput.classList.add('scale-0');
   });
+  searchSiteInput.addEventListener('input', e => {
+    searchSiteInput.classList.add('scale-0');
+  });
 
   closeSearchModal.addEventListener('click',  e => {
     searchSiteInput.classList.remove('scale-0');

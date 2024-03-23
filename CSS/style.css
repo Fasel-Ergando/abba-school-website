@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-/* Utility Class */
+/* Utility Classes */
 .header-link-active hr  {
   transform: scaleX(1);
 }
@@ -26,10 +26,17 @@
 }
 body {
   min-height: 100vh;
+  background-image: url('../Assets/Images/hero\ bg-img.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header {
-  height: 44px;
+  min-height: 44px;
+}
+
+main {
+  min-height: 530px;
 }
 
 .school-logo-img {
@@ -46,6 +53,7 @@ header {
 }
 
 .header-nav-links li a {
+  text-wrap: nowrap;
   color: var(--Default-black);
   text-decoration: none;
   font-size: 19px;
@@ -79,6 +87,7 @@ header {
 .search-abba-website input.search-input-toggle {
   border: none;
   outline: none;
+  transform-origin: 0;
   padding: 12px 40px 12px 15px;
   font-size: 16px;
   font-family: roboto;
@@ -119,6 +128,44 @@ header {
   }
 }
 
+.hero-text p {
+  text-align: center;
+  mix-blend-mode: difference;
+  color: rgba(255, 255, 255, 0.789);
+  font-size: min(calc(3.1rem + 2vw), 15vw);
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.side-img {
+  text-align: center;
+}
+
+.side-img-left {
+  background-image: url('../Assets/Images/hero-img-1.jpg');
+  background-position: center;
+  background-size: cover;
+  margin: 0 10px 0 -20px;
+}
+
+.side-img-right .image-1 {
+  background-image: url('../Assets/Images/hero-img-2.jpg');
+  background-position: center;
+  background-size: cover;
+  min-height: 240px;
+  height: 49%;
+  max-width: 100%; 
+}
+
+.side-img-right .image-2 {
+  background-image: url('../Assets/Images/hero-img-3.jpg');
+  background-position: center;
+  background-size: cover;
+  min-height: 240px;
+  height: 49%;
+  max-width: 100%;
+}
+
 @media (max-width: 500px) {
   .search-abba-website input.search-input {
     padding: 8px 36px 8px 11px;
@@ -129,4 +176,3 @@ header {
   width: 150px;
  } 
 }
-
