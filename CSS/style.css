@@ -24,15 +24,12 @@
 :root {
   --Default-black: rgba(0, 0, 0, 0.7);
 }
+
 body {
   min-height: 100vh;
   background-image: url('../Assets/Images/hero\ bg-img.svg');
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-header {
-  min-height: 44px;
 }
 
 main {
@@ -46,6 +43,7 @@ main {
 
 .header-nav-links {
   display: flex;
+  width: fit-content;
 }
 
 .header-nav-links li {
@@ -131,6 +129,10 @@ main {
   line-height: 1.2;
 }
 
+.hero-text-inner {
+  max-width: 600px;
+}
+
 .side-img {
   text-align: center;
 }
@@ -140,6 +142,7 @@ main {
   background-position: center;
   background-size: cover;
   margin: 0 10px 0 -20px;
+  height: 100%;
 }
 
 .side-img-right .image-1 {
@@ -160,6 +163,7 @@ main {
   max-width: 100%;
 }
 
+/* Responsive Media Queries */
 @media (max-width: 500px) {
   .search-abba-website input.search-input {
     padding: 8px 36px 8px 11px;
@@ -169,13 +173,18 @@ main {
  .school-logo-img {
   width: 150px;
  } 
+
+ .side-img-right .image-1,
+ .side-img-right .image-2 {
+   background-position: center;
+ }
 }
 
 @media (max-width: 1024px) {
-  .side-img-right .image-1,
-  .side-img-right .image-2 {
-    background-position: center;
+  .hero-text p {
+    font-size: min(calc(3.9rem + 2vw), 15vw);
   }
+
   .header-nav-links li a {
     font-size: 17px;
   }
