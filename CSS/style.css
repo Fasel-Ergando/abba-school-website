@@ -180,6 +180,14 @@ main {
  }
 }
 
+.getStartedBtn {
+  background: rgba(241, 213, 111, 0.936) !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  font-family: roboto;
+  color: var(--Default-black);
+}
+
 @media (max-width: 1024px) {
   .hero-text p {
     font-size: min(calc(3.9rem + 2vw), 15vw);
