@@ -63,6 +63,7 @@ main {
 
 .header-nav-links li {
   margin: 0 10px;
+  position: relative;
 }
 
 .header-nav-links li a {
@@ -86,6 +87,22 @@ main {
   transform-origin: 0; */
   transform: scaleX(0);
   transition: 250ms ease-in;
+}
+
+.hover-item {
+  min-width: 300px;
+  padding: 10px 15px;  
+  position: absolute;
+  top: 35px;
+  background: rgb(255, 255, 255);
+  z-index: 2;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: 200ms ease-in-out;
+}
+
+.header-nav-links li:hover .hover-item {
+  transform: scaleY(1);
 }
 
 .header-nav-links li:hover .header-link-underline {
